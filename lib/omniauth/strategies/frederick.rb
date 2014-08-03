@@ -18,7 +18,8 @@ module OmniAuth
           :first_name => raw_info["first_name"],
           :last_name => raw_info["last_name"],
           :business_id => raw_info["business_id"],
-          :is_consumer_only => raw_info["is_consumer_only"]
+          :is_consumer_only => raw_info["is_consumer_only"],
+          :super_admin => raw_info["super_admin"]
         }
       end
 

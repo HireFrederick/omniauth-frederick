@@ -8,7 +8,8 @@ describe OmniAuth::Strategies::Frederick do
     'last_name' => 'Last',
     'id' => 'theId',
     'business_id' => 'theBizId',
-    'is_consumer_only' => false
+    'is_consumer_only' => false,
+    'super_admin' => true
   } }
 
   describe '.options' do
@@ -38,7 +39,7 @@ describe OmniAuth::Strategies::Frederick do
 
   describe '#info' do
     before do
-      expect(frederick).to receive(:raw_info).exactly(5).times.and_return(raw_info)
+      expect(frederick).to receive(:raw_info).exactly(6).times.and_return(raw_info)
     end
 
     it 'maps the raw_info things to info and uid' do
@@ -47,7 +48,8 @@ describe OmniAuth::Strategies::Frederick do
         :first_name => raw_info["first_name"],
         :last_name => raw_info["last_name"],
         :business_id => raw_info["business_id"],
-        :is_consumer_only => raw_info["is_consumer_only"]
+        :is_consumer_only => raw_info["is_consumer_only"],
+        :super_admin => true
       })
     end
   end
