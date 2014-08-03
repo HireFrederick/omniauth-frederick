@@ -11,9 +11,29 @@ describe OmniAuth::Strategies::Frederick do
     'is_consumer_only' => false
   } }
 
-  it 'has the correct options' do
-    expect(frederick.options.client_options.site).to eq 'https://hirefrederick.com'
-    expect(frederick.options.client_options.authorize_url).to eq '/oauth/authorize'
+  describe '.options' do
+    it 'has the correct options by default' do
+      expect(frederick.options.client_options.site).to eq 'https://hirefrederick.com'
+      expect(frederick.options.client_options.authorize_url).to eq '/oauth/authorize'
+    end
+
+    context "ENV['FREDERICK_URL'] exists" do
+      before do
+        ENV['FREDERICK_URL'] = 'https://frederick-staging.herokuapp.com'
+        OmniAuth::Strategies.send(:remove_const, 'Frederick')
+        load 'omniauth/strategies/frederick.rb'
+      end
+
+      after do
+        ENV['FREDERICK_URL'] = nil
+        OmniAuth::Strategies.send(:remove_const, 'Frederick')
+        load 'omniauth/strategies/frederick.rb'
+      end
+
+      it 'sets the site url based on ENV' do
+        expect(frederick.options.client_options.site).to eq 'https://frederick-staging.herokuapp.com'
+      end
+    end
   end
 
   describe '#info' do

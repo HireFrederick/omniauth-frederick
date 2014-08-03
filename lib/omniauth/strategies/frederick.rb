@@ -6,7 +6,7 @@ module OmniAuth
       option :name, :frederick
 
       option :client_options, {
-        :site => "https://hirefrederick.com",
+        :site => ENV['FREDERICK_URL'] || "https://hirefrederick.com",
         :authorize_url => "/oauth/authorize"
       }
 
