@@ -1,20 +1,24 @@
+# coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'omniauth/frederick/version'
 
-Gem::Specification.new do |gem|
-  gem.add_dependency 'omniauth-oauth2', '~> 1.1'
-  gem.name         = 'omniauth-frederick'
-  gem.version     = OmniAuth::Frederick::VERSION
-  gem.date        = '2014-07-30'
-  gem.summary     = "Frederick OmniAuth Strategy"
-  gem.description = "OmniAuth strategy for the Frederick API using OAuth2"
-  gem.authors     = ["Frederick"]
-  gem.email       = 'friends@hirefrederick.com'
-  gem.files       = %w(omniauth-frederick.gemspec)
-  gem.files       += Dir.glob('lib/**/*.rb')
-  gem.homepage    = 'https://github.com/hirefrederick/omniauth-frederick'
-  gem.licenses    = %w(MIT)
+Gem::Specification.new do |spec|
+  spec.add_dependency 'omniauth-oauth2', '~> 1.1'
+  spec.name         = 'omniauth-frederick'
+  spec.version     = OmniAuth::Frederick::VERSION
+  spec.date        = '2014-07-30'
+  spec.summary     = "Frederick OmniAuth Strategy"
+  spec.description = "OmniAuth strategy for the Frederick API using OAuth2"
+  spec.authors     = ["Frederick"]
+  spec.email       = 'friends@hirefrederick.com'
+  spec.files       = %w(omniauth-frederick.gemspec)
+  spec.files       += Dir.glob('lib/**/*.rb')
+  spec.homepage    = 'https://github.com/hirefrederick/omniauth-frederick'
+  spec.licenses    = %w(MIT)
 
-  gem.required_ruby_version = '>= 1.9.3'
+  spec.required_ruby_version = '>= 1.9.3'
+
+  spec.add_development_dependency "bundler", "~> 1.6"
+  spec.add_development_dependency "rake"
 end
