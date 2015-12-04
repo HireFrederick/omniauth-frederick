@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'omniauth/frederick/version'
 
 Gem::Specification.new do |spec|
-  spec.add_dependency 'omniauth-oauth2', '~> 1.1'
+  spec.add_dependency 'omniauth-oauth2', '~> 1.1', '<= 1.3.1'
   spec.name         = 'omniauth-frederick'
   spec.version     = OmniAuth::Frederick::VERSION
   spec.date        = '2014-07-30'
