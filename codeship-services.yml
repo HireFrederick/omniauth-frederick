@@ -1,0 +1,7 @@
+main:
+  build:
+    image: omniauth-frederick
+    dockerfile: Dockerfile
+  cached: true
+  volumes:
+    - ./:/omniauth-frederick

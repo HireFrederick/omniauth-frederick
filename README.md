@@ -1,6 +1,8 @@
 # Omniauth::Frederick
 
-* An omniauth strategy for Frederick
+An omniauth strategy for Frederick
+
+[ ![Codeship Status for HireFrederick/omniauth-frederick](https://app.codeship.com/projects/901b6160-fd00-0131-1c00-62f9faf58206/status?branch=master)](https://app.codeship.com/projects/29406)
 
 ## Installation
 
@@ -15,5 +17,3 @@ And then execute:
 Or install it yourself as:
 
     $ gem install omniauth-frederick
-
-[ ![Codeship Status for HireFrederick/omniauth-frederick](https://www.codeship.io/projects/901b6160-fd00-0131-1c00-62f9faf58206/status?branch=master)](https://www.codeship.io/projects/29406)
