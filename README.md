@@ -2,7 +2,7 @@
 
 An omniauth strategy for Frederick
 
-[ ![Codeship Status for HireFrederick/omniauth-frederick](https://app.codeship.com/projects/901b6160-fd00-0131-1c00-62f9faf58206/status?branch=master)](https://app.codeship.com/projects/29406)
+[ ![Codeship Status for HireFrederick/omniauth-frederick](https://app.codeship.com/projects/6b072cc0-0aab-0135-a191-4665eb7ab8b1/status?branch=master)](https://app.codeship.com/projects/214783)
 
 ## Installation
 
